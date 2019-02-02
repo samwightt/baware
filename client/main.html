@@ -12,6 +12,11 @@
 <template name="hello">
   <button>Click Me</button>
   <p>You've pressed the button {{counter}} times.</p>
+  {{#each conversation in conversations}}
+  <p>{{conversation.number}}</p>
+  <p>{{conversation.location}}</p>
+
+  {{/each}}
 </template>
 
 <template name="info">

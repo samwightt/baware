@@ -1,7 +1,9 @@
 import { Template } from 'meteor/templating';
 import { ReactiveVar } from 'meteor/reactive-var';
+import { Mongo } from 'meteor/mongo';
 
 import './main.html';
+import { People, Conversations } from './collections.js';
 
 Template.hello.onCreated(function helloOnCreated() {
   // counter starts at 0
@@ -11,6 +13,9 @@ Template.hello.onCreated(function helloOnCreated() {
 Template.hello.helpers({
   counter() {
     return Template.instance().counter.get();
+  },
+  conversations() {
+      return People.find({});
   },
 });
 
