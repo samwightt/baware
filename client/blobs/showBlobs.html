@@ -1,7 +1,15 @@
 <template name="showblobs">
-  {{#each document in blobs}}
-    {{#each blob in document.blobs}}
-      <h1>{{blob}}</h1>
+  <div class="ui items">
+    <h2 class="ui dividing header">Info</h2>
+    {{#each document in blobs}}
+      <div class="item">
+        <div class="middle aligned content">
+          <div class="header">{{document.phone}}</div>
+          {{#each blob in document.blobs}}
+            <p>{{blob}}</p>
+          {{/each}}
+        </div>
+      </div>
     {{/each}}
-  {{/each}}
+  </div>
 </template>

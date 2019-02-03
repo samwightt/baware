@@ -2,20 +2,22 @@
 	<title>Hello</title>
 </head>
 <body>
-  <div class="ui grid">
-    <div class="eight wide column">
-      {{> sent}}
+  <div class="ui container">
+    <div class="ui grid">
+      <div class="eight wide column">
+        {{> sent}}
+      </div>
+      <div class="eight wide column">
+        {{> received}}
+      </div>
     </div>
-    <div class="eight wide column">
-      {{> received}}
-    </div>
-  </div>
-  <div class="ui grid">
-    <div class="eight wide column">
-      {{> showblobs}}
-    </div>
-    <div class="eight wide column">
-      {{> blobstats}}
+    <div class="ui grid">
+      <div class="eight wide column">
+        {{> showblobs}}
+      </div>
+      <div class="eight wide column">
+        {{> blobstats}}
+      </div>
     </div>
   </div>
 </body>
