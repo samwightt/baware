@@ -1,14 +1,9 @@
 <template name="showblobs">
-  <div class="ui items">
-    <h2 class="ui dividing header">Info</h2>
+  <h2 class="ui dividing header">Inbox</h2>
+  <div class="ui list">
     {{#each document in blobs}}
-      <div class="item">
-        <div class="middle aligned content">
-          <div class="header">{{document.phone}}</div>
-          {{#each blob in document.blobs}}
-            <p>{{blob}}</p>
-          {{/each}}
-        </div>
+      <div class="ui raised segment">
+        {{> singlenumber document=document}}
       </div>
     {{/each}}
   </div>

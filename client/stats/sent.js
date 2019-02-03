@@ -6,4 +6,8 @@ Template.sent.helpers({
   numSent: function() {
     return Conversations.find({}).count();
   }
+});
+
+Template.sent.onRendered(function() {
+  this.$('.segment').transition('fade in up');
 })

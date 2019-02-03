@@ -1,0 +1,28 @@
+<template name="singlenumber">
+  <div class="item singleitem">
+    <i class="phone icon"></i>
+    <div class="content">
+      <h4 class="header">{{document.phone}}</h4>
+      <div class="list">
+        {{#each blob in blobs}}
+          {{> blobview blob=blob}}
+        {{/each}}
+      </div>
+    </div>
+  </div>
+  {{#if opened}}
+    <a id="showMore" class="ui button primary basic">View More</a>
+  {{else}}
+    <a id="showMore" class="ui primary basic button">View Less</a>
+  {{/if}}
+</template>
+
+<template name="blobview">
+  <div class="item" id="blob-">
+    <i class="circle outline icon"></i>
+    <div class="content">
+      <div class="header">{{blob.content}}</div>
+      <div class="description">Location</div>
+    </div>
+  </div>
+</template>
