@@ -1,6 +1,6 @@
 import './sent.html';
 import { Template } from 'meteor/templating';
-import { Conversations } from '../collections';
+import { Conversations } from '../../collections';
 
 Template.sent.helpers({
   numSent: function() {

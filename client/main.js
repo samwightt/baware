@@ -1,7 +1,14 @@
 import { Template } from 'meteor/templating';
+import { ReactiveDict } from 'meteor/reactive-dict';
 
 import './main.html';
-import './stats/received.js';
-import './stats/sent.js';
-import './blobs/showBlobs.js';
-import './blobs/blobStats.js';
+import './home/home.js';
+import './add/add.js';
+
+Template.mainwrapper.events({
+  'click #addcitizens': function(e) {
+    e.preventDefault();
+
+    $("#addmodal").modal('show');
+  }
+})

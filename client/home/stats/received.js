@@ -1,5 +1,5 @@
 import './received.html';
-import { Conversations } from '../collections.js';
+import { Conversations } from '../../collections.js';
 import { Template } from 'meteor/templating';
 
 Template.received.helpers({

@@ -1,7 +1,7 @@
 import './showBlobs.html';
 import './components/blob.js';
 import { Template } from 'meteor/templating';
-import { Conversations } from '../collections.js';
+import { Conversations } from '../../collections.js';
 
 Template.showblobs.helpers({
   blobs: function() {
