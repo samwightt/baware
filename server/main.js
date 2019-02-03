@@ -27,12 +27,12 @@ Meteor.startup(() => {
     });
     Conversations.insert({
       state: 3,
-      blobs: [],
+      blobs: ["I'm at the park.", "People are in danger."],
       phone: "+12564992183"
     });
     Conversations.insert({
       state: 3,
-      blobs: [],
+      blobs: ["I'm at the office.", "Other people are in danger, not me."],
       phone: "+14438582322"
     });
   }
