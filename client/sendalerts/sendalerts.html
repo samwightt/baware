@@ -1,0 +1,20 @@
+<template name="sendalerts">
+  <div class="ui modal" id="alertmodal">
+    <div class="header">Send Alerts</div>
+    <div class="scrolling content">
+      <form class="ui form" id="alertform">
+        <div class="ui fluid transparent input large">
+          <input type="text" placeholder="Start typing a place..." id="alertplacesearch">
+        </div>
+        <br>
+        <div class="ui fluid transparent input large">
+          <input type="text" placeholder="Search result radius (in miles)" id="alertradius">
+        </div>
+        <br>
+        <div id="alertmapid"></div>
+        <br>
+        <button class="ui success button" type="submit">Add</button>
+      </form>
+    </div>
+  </div>
+</template>

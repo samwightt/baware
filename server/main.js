@@ -1,23 +1,28 @@
 import { Meteor } from 'meteor/meteor';
 import { People, Conversations } from './collections.js';
 
-Meteor.startup(() => {
-  if (People.find({}).count() == 0) {
-    People.insert({
-      phone: "+12056502938",
-      location: "home",
-      state: 0
+Meteor.methods({
+  'sendMassTexts': function(latitude, longitude, miles) {
+    var latLngMiles = miles / 69;
+
+    var phoneString = "";
+
+    People.find({
+     latitude: {
+        "$gte": latitude - latLngMiles,
+        "$lte": latitude + latLngMiles
+      },
+      longitude: {
+        "$gte": longitude - latLngMiles,
+        "$lte": longitude + latLngMiles
+      }
+    }).forEach(function(document) {
+      phoneString += " " + document.phone;
     });
-    People.insert({
-      phone: "+12564992183",
-      location: "elsewhere",
-      state: 1
-    });
-    People.insert({
-      phone: "+14438582322",
-      location: "unknown",
-      state: 1
+
+    exec = Npm.require('child_process').exec;
+    exec("cd ~/Code/meteor/texting-api && python3 text.py" + phoneString, function(error, stdout, stderr) {
+      if (error) console.log(error);
     });
   }
-});
-
+})
