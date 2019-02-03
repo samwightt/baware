@@ -1,0 +1,16 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+pylint = "*"
+
+[packages]
+twilio = "*"
+flask = "*"
+pymongo = "*"
+algoliasearch = "*"
+
+[requires]
+python_version = "3.6.7"
