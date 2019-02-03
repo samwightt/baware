@@ -1,7 +1,23 @@
 <head>
-	<title>HI!</title>
+	<title>bAware</title>
 </head>
 <body>
-
-	<h1>Hi there!</h1>
+  <div class="ui grid">
+    <div class="eight wide column">
+      {{> sent}}
+    </div>
+    <div class="eight wide column">
+      {{> received}}
+    </div>
+  </div>
+  <div class="ui grid">
+    <div class="eight wide column">
+      {{> show-blobs}}
+    </div>
+    <div class="eight wide column">
+      {{> blob-stats}}
+    </div>
+  </div>
+  <h1>Hi there!</h1>
+  {{> hi}}
 </body>

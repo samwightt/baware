@@ -1,0 +1,1 @@
+import './received.html';
