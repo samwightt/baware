@@ -4,6 +4,6 @@ import { Template } from 'meteor/templating';
 
 Template.received.helpers({
   numReceived: function() {
-    return Conversations.find({state: 3}).count();
+    return Conversations.find({state: { "$gte": 3 }}).count();
   }
 })
